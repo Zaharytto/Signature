@@ -42,25 +42,25 @@
                 var message = document.getElementById("message").value;
                 var select = document.getElementById("select").value;
 
-             
+
                 $.ajax({
                   method: "POST",
                   dataType: 'json',
                   url: "/signature/app/createSignature.php",
                   data: {FullName: fullName, message: message, select: select},
-                  success: function (data) { 
+                  success: function (data) {
                     if (data.status === true) {
                         alert(data.message);
                     } else {
-                        alert(data.message);     
+                        alert(data.message);
                     }
                 }
-                  
+
                 })
 
             })
         });
     </script>
-    
+
 </body>
 </html>
